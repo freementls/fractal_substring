@@ -1,6 +1,8 @@
 *.o
 *.a
 *.so
+*.lo
+*.la
 .tmp/
 tools/fss
 tests/test_fss
@@ -8,3 +10,17 @@ bench/bench_fss
 bindings/php_ext/modules/
 bindings/php_ext/.libs/
 bindings/php_ext/autom4te.cache/
+bindings/php_ext/Makefile
+bindings/php_ext/Makefile.fragments
+bindings/php_ext/Makefile.objects
+bindings/php_ext/config.h
+bindings/php_ext/config.log
+bindings/php_ext/config.nice
+bindings/php_ext/config.status
+bindings/php_ext/configure
+bindings/php_ext/configure~
+bindings/php_ext/libtool
+bindings/php_ext/run-tests.php
+bindings/php_ext/*.dep
+bindings/php_ext/build/
+bindings/php_ext/config.h.in~
