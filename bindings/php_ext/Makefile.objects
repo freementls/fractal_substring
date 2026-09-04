@@ -1,0 +1,9 @@
+-include php_fss.dep
+php_fss.lo: /srv/http/fractal_substring/bindings/php_ext/php_fss.c
+	$(LIBTOOL) --tag=CC --mode=compile $(CC) -I. -I/srv/http/fractal_substring/bindings/php_ext $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /srv/http/fractal_substring/bindings/php_ext/php_fss.c -o php_fss.lo  -MMD -MF php_fss.dep -MT php_fss.lo
+$(phplibdir)/fss.la: ./fss.la
+	$(LIBTOOL) --tag=CC --mode=install cp ./fss.la $(phplibdir)
+
+./fss.la: $(shared_objects_fss) $(FSS_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --tag=CC --mode=link $(CC) -shared $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS)  -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_fss) $(FSS_SHARED_LIBADD)
+

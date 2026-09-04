@@ -1,0 +1,9 @@
+#! /bin/sh
+#
+# Created by configure
+
+CPPFLAGS='-I/srv/http/fractal_substring/include' \
+LDFLAGS='-L/srv/http/fractal_substring -Wl,-rpath,/srv/http/fractal_substring' \
+'./configure' \
+'--enable-fss' \
+"$@"

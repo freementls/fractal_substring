@@ -1,0 +1,10 @@
+*.o
+*.a
+*.so
+.tmp/
+tools/fss
+tests/test_fss
+bench/bench_fss
+bindings/php_ext/modules/
+bindings/php_ext/.libs/
+bindings/php_ext/autom4te.cache/
